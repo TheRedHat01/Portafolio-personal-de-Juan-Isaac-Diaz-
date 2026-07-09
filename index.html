@@ -1,0 +1,348 @@
+<!DOCTYPE html><html lang="es"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Isaac Díaz — Frontend Developer &amp; Graphic Designer</title>
+  <meta name="description" content="Portafolio de Isaac Díaz, Frontend Developer y Graphic Designer. Diseño y desarrollo de experiencias web modernas, minimalistas y de alto rendimiento.">
+  <meta name="theme-color" content="#090909">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Isaac Díaz — Frontend Developer">
+  <meta property="og:description" content="Portafolio personal de Isaac Díaz. Frontend Developer &amp; Graphic Designer.">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===================== LOADER ===================== -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__mark">
+      <span>I</span><span>D</span>
+    </div>
+    <div class="loader__bar"><div class="loader__bar-fill"></div></div>
+  </div>
+
+  <!-- ===================== CUSTOM CURSOR ===================== -->
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <!-- ===================== NOISE OVERLAY ===================== -->
+  <div class="noise" aria-hidden="true"></div>
+
+  <!-- ===================== AMBIENT GLOW ORBS ===================== -->
+  <div class="glow-orb glow-orb--1" id="orb1" aria-hidden="true"></div>
+  <div class="glow-orb glow-orb--2" id="orb2" aria-hidden="true"></div>
+
+  <!-- ===================== SCROLL PROGRESS ===================== -->
+  <div class="scroll-indicator" id="scrollIndicator" aria-hidden="true"></div>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="navbar" id="navbar">
+    <nav class="navbar__inner" aria-label="Navegación principal">
+      <a href="#top" class="navbar__logo" data-cursor-hover="">Isaac<span>.</span></a>
+
+      <button class="navbar__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="navbar__menu" id="navMenu">
+        <li><a href="#about" class="navbar__link" data-cursor-hover="">Sobre mí</a></li>
+        <li><a href="#skills" class="navbar__link" data-cursor-hover="">Habilidades</a></li>
+        <li><a href="#projects" class="navbar__link" data-cursor-hover="">Proyectos</a></li>
+        <li><a href="#experience" class="navbar__link" data-cursor-hover="">Experiencia</a></li>
+        <li><a href="#contact" class="navbar__link navbar__link--cta" data-cursor-hover="">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="hero">
+      <div class="hero__inner">
+
+        <div class="hero__content" data-reveal="">
+          <p class="eyebrow" data-reveal="">Portafolio · 2026</p>
+          <h1 class="hero__title">
+            <span class="hero__title-line">Isaac</span>
+            <span class="hero__title-line hero__title-line--accent">Díaz</span>
+          </h1>
+
+          <div class="hero__roles" aria-hidden="true">
+            <span class="hero__role hero__role--active">Frontend Developer</span>
+            <span class="hero__role">Graphic Designer</span>
+          </div>
+
+          <p class="hero__description" data-reveal="">
+            Construyo interfaces limpias, rápidas y con carácter. Me enfoco en el detalle:
+            tipografía, espaciado, movimiento y rendimiento, para que cada proyecto se sienta
+            tan bien como se ve.
+          </p>
+
+          <div class="hero__actions" data-reveal="">
+            <a href="#projects" class="btn btn--primary" data-cursor-hover="">
+              <span>Ver proyectos</span>
+              <svg width="18" height="18" fill="none" aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </a>
+            <a href="CV-Isaac-Diaz.pdf" class="btn btn--ghost" data-cursor-hover="" download="">
+              <span>Descargar CV</span>
+              <svg width="18" height="18" fill="none" aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M12 3v12m0 0-4-4m4 4 4-4M5 21h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero__visual" data-reveal="">
+          <div class="hero__avatar-wrap">
+            <div class="hero__avatar-glow"></div>
+            <div class="hero__avatar">
+              <span>
+              <img src="isaac.png" alt="Logo">
+              </span>
+            </div>
+            <div class="hero__avatar-ring"></div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-cue" data-cursor-hover="" aria-label="Desplazarse hacia abajo">
+        <span class="scroll-cue__dot"></span>
+      </a>
+    </section>
+
+    <!-- ===================== SOBRE MÍ ===================== -->
+    <section class="section" id="about">
+      <div class="section__inner">
+        <p class="eyebrow" data-reveal="">Sobre mí</p>
+        <h2 class="section__title" data-reveal="">Quién soy</h2>
+
+        <div class="glass-card about-card" data-reveal="">
+          <p>
+            Soy Isaac Díaz, desarrollador frontend y diseñador gráfico enfocado en crear
+            experiencias digitales minimalistas, rápidas y visualmente cuidadas. Disfruto
+            el proceso completo: desde bocetar una idea hasta convertirla en una interfaz
+            funcional, accesible y con una identidad propia.
+          </p>
+          <p>
+            Combino diseño y código para que cada proyecto tenga un propósito claro:
+            comunicar bien y funcionar mejor. Me interesa especialmente el detalle en el
+            movimiento, la tipografía y el espacio, esos pequeños elementos que hacen que
+            una página se sienta premium.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== HABILIDADES ===================== -->
+    <section class="section" id="skills">
+      <div class="section__inner">
+        <p class="eyebrow" data-reveal="">Habilidades</p>
+        <h2 class="section__title" data-reveal="">Con qué trabajo</h2>
+
+        <div class="skills-grid">
+          <article class="skill-card" data-reveal="">
+            <div class="skill-card__icon" aria-hidden="true">
+              <svg fill="none" viewBox="0 0 24 24"><path d="M4 3l1.6 17L12 22l6.4-2L20 3H4z" stroke="currentColor" stroke-width="1.5"></path><path d="M8 8h8l-.3 3H8.4l.2 2h7l-.5 5-3.1.9-3.1-.9-.2-2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </div>
+            <h3>HTML5</h3>
+            <p>Estructura semántica, accesible y optimizada para SEO.</p>
+          </article>
+
+          <article class="skill-card" data-reveal="">
+            <div class="skill-card__icon" aria-hidden="true">
+              <svg fill="none" viewBox="0 0 24 24"><path d="M4 3l1.6 17L12 22l6.4-2L20 3H4z" stroke="currentColor" stroke-width="1.5"></path><path d="M16.5 8H8l.2 2h8l-.5 6.3-3.7 1-3.7-1-.2-2.6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </div>
+            <h3>CSS3</h3>
+            <p>Layouts modernos, animaciones y sistemas de diseño escalables.</p>
+          </article>
+
+          <article class="skill-card" data-reveal="">
+            <div class="skill-card__icon" aria-hidden="true">
+              <svg fill="none" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5"></rect><path d="M8 15.5c0 1 .8 1.8 2 1.8s2-.6 2-1.8V9M15 9v5.5c0 1.6 1 2 2 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>
+            </div>
+            <h3>JavaScript</h3>
+            <p>Interactividad, animaciones y lógica de aplicaciones sin frameworks.</p>
+          </article>
+
+          <article class="skill-card" data-reveal="">
+            <div class="skill-card__icon" aria-hidden="true">
+              <svg fill="none" viewBox="0 0 24 24"><rect x="3" y="4" width="7" height="16" rx="1.5" stroke="currentColor" stroke-width="1.5"></rect><rect x="14" y="4" width="7" height="10" rx="1.5" stroke="currentColor" stroke-width="1.5"></rect></svg>
+            </div>
+            <h3>Responsive Design</h3>
+            <p>Interfaces adaptadas a cualquier dispositivo, sin errores visuales.</p>
+          </article>
+
+          <article class="skill-card" data-reveal="">
+            <div class="skill-card__icon" aria-hidden="true">
+              <svg fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5"></circle><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>
+            </div>
+            <h3>UI Design</h3>
+            <p>Sistemas visuales coherentes, tipografía y jerarquía cuidada.</p>
+          </article>
+
+          <article class="skill-card" data-reveal="">
+            <div class="skill-card__icon" aria-hidden="true">
+              <svg fill="none" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.2" stroke="currentColor" stroke-width="1.5"></circle><circle cx="6" cy="18" r="2.2" stroke="currentColor" stroke-width="1.5"></circle><circle cx="18" cy="12" r="2.2" stroke="currentColor" stroke-width="1.5"></circle><path d="M6 8.2V15.8M8 6.6l8 4M8 17.4l8-4" stroke="currentColor" stroke-width="1.5"></path></svg>
+            </div>
+            <h3>Git</h3>
+            <p>Control de versiones, ramas y flujos de trabajo colaborativos.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROYECTOS ===================== -->
+    <section class="section" id="projects">
+      <div class="section__inner">
+        <p class="eyebrow" data-reveal="">Proyectos</p>
+        <h2 class="section__title" data-reveal="">Lo que he construido</h2>
+
+        <div class="projects-grid">
+
+          <!-- Proyecto principal -->
+          <article class="project-card project-card--featured" data-reveal="">
+            <div class="project-card__glow" aria-hidden="true"></div>
+            <div class="project-card__header">
+              <span class="project-card__tag">Proyecto principal</span>
+              <h3>VortexY2K</h3>
+              <p>
+                Es una tienda virtual creada para una marca de ropa es un sitio de identidad visual con estética Y2K reinterpretada: gradientes,
+                brillos y tipografía experimental sobre una base de interacción moderna
+                y fluida.
+              </p>
+            </div>
+            <ul class="project-card__stack" aria-label="Tecnologías usadas">
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>JavaScript</li>
+            </ul>
+            <div class="project-card__actions">
+              <a href="https://theredhat01.github.io/Vortexy2k/#videos" class="btn btn--small btn--primary" data-cursor-hover="">Ver proyecto</a>
+              <a href="https://github.com/TheRedHat01/Vortexy2k” class=" btn="" btn--small="" btn--ghost"="" data-cursor-hover="">
+                <svg width="16" height="16" fill="currentColor" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.5v-1.94c-2.78.62-3.37-1.36-3.37-1.36-.46-1.2-1.11-1.52-1.11-1.52-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.36-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.72 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.42.2 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9v2.82c0 .28.18.61.69.5C19.14 20.61 22 16.77 22 12.25 22 6.58 17.52 2 12 2Z"></path></svg>
+                GitHub
+              </a>
+            </div>
+          </article>
+
+          <!-- Proyectos secundarios -->
+          <article class="project-card" data-reveal="">
+            <div class="project-card__header">
+              <span class="project-card__tag">Web app</span>
+              <h3>Panel de tareas</h3>
+              <p>Gestor de tareas con arrastrar y soltar, guardado local y modo oscuro.</p>
+            </div>
+            <ul class="project-card__stack" aria-label="Tecnologías usadas">
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>JavaScript</li>
+            </ul>
+            <div class="project-card__actions">
+              <a href="https://theredhat01.github.io/Gestor-de-tareas-/" class="btn btn--small btn--primary" data-cursor-hover="">Ver proyecto</a>
+              <a href="https://github.com/TheRedHat01/Gestor-de-tareas-" class="btn btn--small btn--ghost" data-cursor-hover="">GitHub</a>
+            </div>
+          </article>
+
+          <article class="project-card" data-reveal="">
+            <div class="project-card__header">
+              <span class="project-card__tag">Landing page</span>
+              <h3>Studio Landing</h3>
+              <p>Landing page animada para un estudio creativo ficticio, con scroll reveal.</p>
+            </div>
+            <ul class="project-card__stack" aria-label="Tecnologías usadas">
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>JavaScript</li>
+            </ul>
+            <div class="project-card__actions">
+              <a href="https://theredhat01.github.io/Studio-leandig-maqueta-uso-libre-/" class="btn btn--small btn--primary" data-cursor-hover="">Ver proyecto</a>
+              <a href="https://github.com/TheRedHat01/Studio-leandig-maqueta-uso-libre-" class="btn btn--small btn--ghost" data-cursor-hover="">GitHub</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EXPERIENCIA ===================== -->
+    <section class="section" id="experience">
+      <div class="section__inner">
+        <p class="eyebrow" data-reveal="">Experiencia</p>
+        <h2 class="section__title" data-reveal="">Mi trayectoria</h2>
+
+        <div class="glass-card experience-card" data-reveal="">
+          <div class="experience-card__dot" aria-hidden="true"></div>
+          <div>
+            <span class="experience-card__status">En curso</span>
+            <p>
+              Actualmente desarrollando proyectos personales y ampliando mis conocimientos
+              en desarrollo frontend, con especial interés en diseño de interfaces,
+              animación web y buenas prácticas de código.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACTO ===================== -->
+    <section class="section" id="contact">
+      <div class="section__inner">
+        <p class="eyebrow" data-reveal="">Contacto</p>
+        <h2 class="section__title" data-reveal="">Hablemos</h2>
+        <p class="section__subtitle" data-reveal="">
+          ¿Tienes un proyecto en mente o quieres colaborar? Escríbeme por cualquiera de estos medios.
+        </p>
+
+        <div class="contact-grid" data-reveal="">
+          <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="contact-card" data-cursor-hover="">
+            <svg width="22" height="22" fill="currentColor" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.5v-1.94c-2.78.62-3.37-1.36-3.37-1.36-.46-1.2-1.11-1.52-1.11-1.52-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.36-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.72 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.42.2 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9v2.82c0 .28.18.61.69.5C19.14 20.61 22 16.77 22 12.25 22 6.58 17.52 2 12 2Z"></path></svg>
+            <span>GitHub</span>
+          </a>
+
+          <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" class="contact-card" data-cursor-hover="">
+            <svg width="22" height="22" fill="currentColor" aria-hidden="true" viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.75V21h-4v-5.6c0-1.34-.02-3.06-1.87-3.06-1.87 0-2.16 1.46-2.16 2.96V21h-4V9Z"></path></svg>
+            <span>LinkedIn</span>
+          </a>
+
+          <a href="mailto:isaac.diaz@example.com" class="contact-card" data-cursor-hover="">
+            <svg width="22" height="22" fill="none" aria-hidden="true" viewBox="0 0 24 24"><path d="M3 5h18v14H3V5Z" stroke="currentColor" stroke-width="1.5"></path><path d="m3 6 9 7 9-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            <span>Correo</span>
+          </a>
+
+          <a href="https://wa.me/00000000000" target="_blank" rel="noopener noreferrer" class="contact-card" data-cursor-hover="">
+            <svg width="22" height="22" fill="currentColor" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.06L2 22l5.1-1.34A10 10 0 1 0 12 2Zm5.71 14.24c-.24.68-1.39 1.3-1.92 1.35-.5.06-1.09.09-1.75-.11a15.1 15.1 0 0 1-1.61-.6 12.06 12.06 0 0 1-4.62-4.08c-.68-.9-1.13-1.9-1.26-2.98-.11-.9.16-1.71.7-2.28.19-.2.4-.24.55-.24h.4c.14 0 .32-.02.5.39.19.44.63 1.5.69 1.6.06.11.1.24.02.4-.08.15-.12.25-.24.38-.13.14-.27.31-.38.42-.13.13-.26.27-.11.53.15.26.66 1.1 1.42 1.79 1 .9 1.83 1.19 2.09 1.32.26.13.42.11.57-.06.16-.18.66-.76.84-1.02.18-.26.35-.21.58-.13.24.09 1.5.71 1.76.84.26.13.43.19.49.3.06.11.06.65-.18 1.31Z"></path></svg>
+            <span>WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <p>© 2026 Isaac Díaz</p>
+      <p>Designed &amp; Developed by Isaac Díaz</p>
+    </div>
+  </footer>
+
+  <!-- ===================== BACK TO TOP ===================== -->
+  <button class="back-to-top" id="backToTop" aria-label="Volver arriba" data-cursor-hover="">
+    <svg width="18" height="18" fill="none" aria-hidden="true" viewBox="0 0 24 24">
+      <path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+  </button>
+
+  <script src="script.js"></script>
+
+
+</body></html>
